@@ -32,6 +32,7 @@ public class ClientesNegocio{
 		if(cliente.isPresent()) {
 			ClientesEntity clientes = cliente.get();
 			clientes.setNombreCompleto(model.getNombreCompleto());
+			clientes.setIdClientes(model.getIdClientes());
 			return service.save(clientes);
 		}else {
 			throw new RuntimeException("No se encontro el id del cliente" +id);
