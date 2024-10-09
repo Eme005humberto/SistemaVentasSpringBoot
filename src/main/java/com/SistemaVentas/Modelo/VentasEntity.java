@@ -19,6 +19,8 @@ public class VentasEntity {
 	private int idCliente;
 	@Column(name = "idProducto")
 	private int idProducto;
+	@Column(name = "precioUnitario")
+	private float precioUnitario;
 	@Column(name = "pagoProducto")
 	private float pagoProducto;
 	@Column(name = "totalPagar")
@@ -54,6 +56,11 @@ public class VentasEntity {
 	public void setTotalPagar(float totalPagar) {
 		this.totalPagar = totalPagar;
 	}
-	
+	public float getPrecioUnitario() {
+		return precioUnitario;
+	}
+	public void setPrecioUnitario(float precioUnitario) {
+		this.precioUnitario = precioUnitario;
+	}
 	
 }

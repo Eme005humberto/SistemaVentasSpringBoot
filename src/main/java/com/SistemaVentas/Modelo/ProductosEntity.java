@@ -1,16 +1,27 @@
 package com.SistemaVentas.Modelo;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tbtlproducts")
 public class ProductosEntity {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idProducto")
 	private int idProducto;
+	@Column(name = "nombreProducto")
 	private String nombreProducto;
+	@Column(name = "precioUnitario")
 	private float precioUnitario;
+	@Column(name = "cantidad")
 	private int cantidad;
+	@Column(name = "idCategoria")
 	private int idCategoria;
 	
 	public int getIdProducto() {
@@ -43,6 +54,4 @@ public class ProductosEntity {
 	public void setIdCategoria(int idCategoria) {
 		this.idCategoria = idCategoria;
 	}
-	
-	
 }
