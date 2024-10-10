@@ -43,4 +43,9 @@ public class ClientesController {
 		clientes.eliminarCliente(id);
 		return "Cliente eliminado exitosamente!!";
 	}
+	//Buscamos un cliente por su Id
+	@GetMapping("/clientes/{id}")
+	public ClientesEntity buscarCliente(@PathVariable int id) {
+		return clientes.buscarPorId(id);
+	}
 }
