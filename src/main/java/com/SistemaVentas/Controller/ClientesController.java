@@ -3,6 +3,7 @@ package com.SistemaVentas.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,8 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.SistemaVentas.Modelo.ClientesEntity;
 import com.SistemaVentas.Negocio.ClientesNegocio;
 
-@RequestMapping("/Clientes")
+@RequestMapping("/api/Clientes")
 @RestController
+@CrossOrigin(origins = "http://localhost:4200") // Permitir que Angular acceda a este backend
 public class ClientesController {
 	
 	@Autowired
